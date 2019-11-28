@@ -12,6 +12,4 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Print github context
-      env:
-        GITHUB_CONTEXT: ${{ toJson(github) }}
-      run: echo "$GITHUB_CONTEXT"
+      uses: .github/actions/pr
