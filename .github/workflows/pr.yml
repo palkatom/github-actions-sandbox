@@ -1,0 +1,17 @@
+name: Test pull request events
+
+on:
+  pull_request:
+    types: [opened, synchronize]
+
+jobs:
+  check-pr:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Print github context
+      env:
+        GITHUB_CONTEXT: ${{ toJson(github) }}
+      run: echo "$GITHUB_CONTEXT"
