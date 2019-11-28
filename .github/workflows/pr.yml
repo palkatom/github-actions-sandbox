@@ -12,4 +12,4 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - name: Print github context
-      uses: .github/actions/pr
+      uses: ./.github/actions/pr
