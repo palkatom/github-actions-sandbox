@@ -1,0 +1,5 @@
+name: 'PR tests'
+description: 'PR events testing action'
+runs:
+        using: 'node12'
+        main: 'index.js'
